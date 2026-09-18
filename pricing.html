@@ -3,11 +3,12 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Pricing - Calitoy Casting</title>
-<meta name="description" content="Tiered pricing for AI casting services. Single role, multi-role packages, full production casting, monthly retainers, and specialized services.">
+<title>Pricing — Calitoy Casting</title>
+<meta name="description" content="Transparent pricing for talent profiles, digital twins, agency bundles, and production casting packages. Secure Stripe checkout.">
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Oswald:wght@400;500;600;700&display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Space+Grotesk:wght@400;500;600;700&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
 <link rel="stylesheet" href="styles.css">
 </head>
 <body>
@@ -16,86 +17,140 @@
   <div class="nav-wrap">
     <a href="index.html" class="nav-logo">
       <img src="assets/calitoy-casting-logo.png" alt="Calitoy Casting">
+      <span class="logo-text">Calitoy<span> Casting</span></span>
     </a>
     <ul class="nav-links">
       <li><a href="index.html">Home</a></li>
-      <li><a href="services.html">Services</a></li>
+      <li><a href="submit.html">Submit Talent</a></li>
+      <li><a href="clients.html">For Clients</a></li>
+      <li><a href="agencies.html">For Agencies</a></li>
       <li><a href="pricing.html" class="active">Pricing</a></li>
-      <li><a href="showcase.html">Showcase</a></li>
-      <li><a href="about.html">About</a></li>
+      <li><a href="login.html">Login</a></li>
+      <li><a href="https://calitoy.com" class="nav-back">&larr; Back to Calitoy</a></li>
     </ul>
-    <a href="intake.html" class="nav-cta">Start Casting</a>
-    <button class="hamburger" aria-label="Menu">
-      <span></span><span></span><span></span>
-    </button>
+    <a href="submit.html" class="nav-cta">Submit Talent</a>
+    <button class="hamburger" aria-label="Menu"><span></span><span></span><span></span></button>
   </div>
 </header>
 <div class="mobile-nav">
   <a href="index.html">Home</a>
-  <a href="services.html">Services</a>
+  <a href="submit.html">Submit Talent</a>
+  <a href="clients.html">For Clients</a>
+  <a href="agencies.html">For Agencies</a>
   <a href="pricing.html">Pricing</a>
-  <a href="showcase.html">Showcase</a>
-  <a href="about.html">About</a>
-  <a href="intake.html" class="nav-cta">Start Casting</a>
+  <a href="login.html">Login</a>
+  <a href="https://calitoy.com">&larr; Back to Calitoy</a>
+  <a href="submit.html" class="nav-cta">Submit Talent</a>
 </div>
 
-<section class="hero" style="min-height: auto; padding: 80px 0 40px;">
-  <div class="hero-bg"></div>
+<section class="hero compact">
+  <div class="hero-bg" style="background-image:url('https://cdn.shopify.com/s/files/1/0635/2040/7793/files/1_9e029d4c-2f6e-457a-97f2-a17782d92e22.jpg?v=1737700119></div>
+  <div class="hero-overlay"></div>
   <div class="container hero-content">
-    <p class="eyebrow">Transparent Pricing</p>
-    <h1>Casting <span class="gold">Pricing</span></h1>
-    <p>Every package is built for a specific production scale. All prices include AI generation, voice modeling, revisions, and delivery in your required formats.</p>
+    <span class="hero-badge"><span class="dot"></span> Transparent Pricing</span>
+    <h1>Simple, Scalable <span class="gold">Pricing</span></h1>
+    <p class="lead">Choose a plan for talent, agencies, or productions. Secure checkout is powered by Stripe.</p>
   </div>
 </section>
 
+<!-- CORE 3-TIER -->
 <section>
   <div class="container">
-    <p class="eyebrow">Core Packages</p>
-    <h2 class="section-title">Production Packages</h2>
-    <p class="section-subtitle">Choose the package that matches your production scale.</p>
+    <div class="section-head center reveal">
+      <p class="eyebrow">Membership Tiers</p>
+      <h2 class="section-title">Talent &amp; Agency Plans</h2>
+      <p class="section-subtitle">Get listed, create your digital twin, or bring your whole roster.</p>
+    </div>
     <div class="pricing-grid">
-      <div class="pricing-card">
+      <div class="pricing-card reveal">
+        <h3>Basic Talent Profile</h3>
+        <div class="pricing-price">$99<span class="period">/ one-time</span></div>
+        <p class="pricing-desc">Individual talent listing to get discovered.</p>
+        <ul class="pricing-features">
+          <li><i class="fa-solid fa-check"></i> Searchable professional profile</li>
+          <li><i class="fa-solid fa-check"></i> Headshot &amp; reel links</li>
+          <li><i class="fa-solid fa-check"></i> Skills &amp; experience tags</li>
+          <li><i class="fa-solid fa-check"></i> Included in AI-powered matching</li>
+        </ul>
+        <a href="submit.html" class="btn-secondary">Create Profile</a>
+      </div>
+      <div class="pricing-card featured reveal">
+        <div class="pricing-badge">Most Popular</div>
+        <h3>Pro Digital Twin</h3>
+        <div class="pricing-price">$499<span class="period">/ one-time</span></div>
+        <p class="pricing-desc">Digital double + AI voice clone for remote auditions.</p>
+        <ul class="pricing-features">
+          <li><i class="fa-solid fa-check"></i> Everything in Basic</li>
+          <li><i class="fa-solid fa-check"></i> Photorealistic digital double</li>
+          <li><i class="fa-solid fa-check"></i> AI voice clone</li>
+          <li><i class="fa-solid fa-check"></i> Priority matching &amp; placement</li>
+          <li><i class="fa-solid fa-check"></i> Consent-controlled usage rights</li>
+        </ul>
+        <a href="submit.html" class="btn-primary">Get Pro Digital Twin</a>
+      </div>
+      <div class="pricing-card reveal">
+        <h3>Agency Bundle</h3>
+        <div class="pricing-price">Custom<span class="period">/ volume</span></div>
+        <p class="pricing-desc">Multi-talent roster management for agencies.</p>
+        <ul class="pricing-features">
+          <li><i class="fa-solid fa-check"></i> Unlimited roster profiles</li>
+          <li><i class="fa-solid fa-check"></i> Bulk digital twin &amp; voice clones</li>
+          <li><i class="fa-solid fa-check"></i> White-label branded portal</li>
+          <li><i class="fa-solid fa-check"></i> Dedicated partnership manager</li>
+          <li><i class="fa-solid fa-check"></i> Revenue share on placements</li>
+        </ul>
+        <a href="agencies.html" class="btn-secondary">Request Agency Quote</a>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- PRODUCTION PACKAGES (real Stripe checkout) -->
+<section style="background: var(--bg-surface);">
+  <div class="container">
+    <div class="section-head center reveal">
+      <p class="eyebrow">For Productions</p>
+      <h2 class="section-title">Casting Packages</h2>
+      <p class="section-subtitle">Full-service casting for productions. Secure one-time checkout via Stripe.</p>
+    </div>
+    <div class="pricing-grid">
+      <div class="pricing-card reveal">
         <h3>Single Role Cast</h3>
-        <div class="pricing-price">$1,500<span class="period">one-time</span></div>
+        <div class="pricing-price">$1,500<span class="period">/ one-time</span></div>
         <p class="pricing-desc">Perfect for indie films and single-character needs.</p>
         <ul class="pricing-features">
-          <li>One AI-generated character</li>
-          <li>Up to 3 appearance variations</li>
-          <li>Voice model included</li>
-          <li>48-hour delivery</li>
-          <li>2 rounds of revisions</li>
-          <li>Full usage rights</li>
+          <li><i class="fa-solid fa-check"></i> One AI-matched or generated character</li>
+          <li><i class="fa-solid fa-check"></i> Up to 3 appearance variations</li>
+          <li><i class="fa-solid fa-check"></i> Voice model included</li>
+          <li><i class="fa-solid fa-check"></i> 48-hour delivery</li>
+          <li><i class="fa-solid fa-check"></i> Full usage rights</li>
         </ul>
         <button class="btn-primary" onclick="calitoyCheckout('price_1UBIfXISCKHDtOuFtr53JNz7','Single Role Cast')">Buy Now</button>
       </div>
-      <div class="pricing-card featured">
+      <div class="pricing-card featured reveal">
         <div class="pricing-badge">Most Popular</div>
         <h3>Multi-Role Package</h3>
-        <div class="pricing-price">$5,000<span class="period">one-time</span></div>
+        <div class="pricing-price">$5,000<span class="period">/ one-time</span></div>
         <p class="pricing-desc">Up to 5 roles for short films and web series.</p>
         <ul class="pricing-features">
-          <li>Up to 5 AI characters</li>
-          <li>Unlimited variations per role</li>
-          <li>Voice models for all roles</li>
-          <li>72-hour delivery</li>
-          <li>5 rounds of revisions</li>
-          <li>Priority support</li>
-          <li>Full usage rights</li>
+          <li><i class="fa-solid fa-check"></i> Up to 5 characters</li>
+          <li><i class="fa-solid fa-check"></i> Unlimited variations per role</li>
+          <li><i class="fa-solid fa-check"></i> Voice models for all roles</li>
+          <li><i class="fa-solid fa-check"></i> 72-hour delivery</li>
+          <li><i class="fa-solid fa-check"></i> Priority support + usage rights</li>
         </ul>
         <button class="btn-primary" onclick="calitoyCheckout('price_1UBIfXISCKHDtOuFhxt7vO07','Multi-Role Package (up to 5)')">Buy Now</button>
       </div>
-      <div class="pricing-card">
+      <div class="pricing-card reveal">
         <h3>Full Production Cast</h3>
-        <div class="pricing-price">$15,000<span class="period">one-time</span></div>
-        <p class="pricing-desc">Complete casting for feature films and TV series.</p>
+        <div class="pricing-price">$15,000<span class="period">/ one-time</span></div>
+        <p class="pricing-desc">Complete casting for feature films and TV.</p>
         <ul class="pricing-features">
-          <li>Unlimited AI characters</li>
-          <li>Full voice cloning suite</li>
-          <li>Crowd generation tools</li>
-          <li>7-day delivery</li>
-          <li>Unlimited revisions</li>
-          <li>Dedicated casting director</li>
-          <li>Full usage rights</li>
+          <li><i class="fa-solid fa-check"></i> Unlimited characters</li>
+          <li><i class="fa-solid fa-check"></i> Full voice cloning suite</li>
+          <li><i class="fa-solid fa-check"></i> Crowd generation tools</li>
+          <li><i class="fa-solid fa-check"></i> 7-day delivery</li>
+          <li><i class="fa-solid fa-check"></i> Dedicated casting director</li>
         </ul>
         <button class="btn-primary" onclick="calitoyCheckout('price_1UBIfXISCKHDtOuFRfgH9AXj','Full Production Cast')">Buy Now</button>
       </div>
@@ -103,25 +158,26 @@
   </div>
 </section>
 
-<section style="background: var(--bg-surface);">
+<!-- RETAINER -->
+<section>
   <div class="container">
-    <p class="eyebrow">Retainer</p>
-    <h2 class="section-title">Monthly Retainer</h2>
-    <p class="section-subtitle">For studios and production companies with ongoing casting needs.</p>
-    <div class="pricing-grid" style="grid-template-columns: 1fr; max-width: 640px; margin: 0 auto;">
-      <div class="pricing-card">
+    <div class="section-head center reveal">
+      <p class="eyebrow">Retainer</p>
+      <h2 class="section-title">Monthly Retainer</h2>
+      <p class="section-subtitle">For studios with ongoing casting needs.</p>
+    </div>
+    <div class="pricing-grid" style="grid-template-columns:1fr;max-width:640px;margin:0 auto;">
+      <div class="pricing-card reveal">
         <h3>Monthly Casting Retainer</h3>
-        <div class="pricing-price">$8,000<span class="period">per month</span></div>
+        <div class="pricing-price">$8,000<span class="period">/ per month</span></div>
         <p class="pricing-desc">Ongoing casting support for continuous production pipelines.</p>
         <ul class="pricing-features">
-          <li>Up to 10 new characters per month</li>
-          <li>Voice cloning for all characters</li>
-          <li>Crowd generation included</li>
-          <li>24-hour turnaround on requests</li>
-          <li>Unlimited revisions</li>
-          <li>Dedicated casting director</li>
-          <li>Priority pipeline access</li>
-          <li>Full usage rights</li>
+          <li><i class="fa-solid fa-check"></i> Up to 10 new characters per month</li>
+          <li><i class="fa-solid fa-check"></i> Voice cloning for all characters</li>
+          <li><i class="fa-solid fa-check"></i> Crowd generation included</li>
+          <li><i class="fa-solid fa-check"></i> 24-hour turnaround on requests</li>
+          <li><i class="fa-solid fa-check"></i> Dedicated casting director</li>
+          <li><i class="fa-solid fa-check"></i> Priority pipeline access</li>
         </ul>
         <button class="btn-primary" onclick="calitoyCheckout('price_1UBIfXISCKHDtOuFmOPkwzn8','Monthly Casting Retainer')">Subscribe</button>
       </div>
@@ -129,37 +185,36 @@
   </div>
 </section>
 
-<section>
+<!-- SPECIALIZED -->
+<section style="background: var(--bg-surface);">
   <div class="container">
-    <p class="eyebrow">Specialized</p>
-    <h2 class="section-title">Specialized Services</h2>
-    <p class="section-subtitle">Standalone services for specific casting needs.</p>
-    <div class="pricing-grid">
-      <div class="pricing-card">
+    <div class="section-head center reveal">
+      <p class="eyebrow">Specialized</p>
+      <h2 class="section-title">Standalone Services</h2>
+      <p class="section-subtitle">Specific services for targeted casting needs.</p>
+    </div>
+    <div class="pricing-grid" style="max-width:840px;margin:0 auto;">
+      <div class="pricing-card reveal">
         <h3>Digital Double Creation</h3>
-        <div class="pricing-price">$3,500<span class="period">one-time</span></div>
+        <div class="pricing-price">$3,500<span class="period">/ one-time</span></div>
         <p class="pricing-desc">Photorealistic digital double for a single performer.</p>
         <ul class="pricing-features">
-          <li>Full-body digital double</li>
-          <li>Performance capture mapping</li>
-          <li>Scene-ready delivery</li>
-          <li>3 rounds of revisions</li>
-          <li>72-hour delivery</li>
-          <li>Full usage rights</li>
+          <li><i class="fa-solid fa-check"></i> Full-body digital double</li>
+          <li><i class="fa-solid fa-check"></i> Performance capture mapping</li>
+          <li><i class="fa-solid fa-check"></i> Scene-ready delivery</li>
+          <li><i class="fa-solid fa-check"></i> 72-hour delivery + usage rights</li>
         </ul>
-        <button class="btn-primary" onclick="calitoyCheckout('price_1UBIfXISCKHDtOuFQjtqWzr3','Digital Double Creation')">Buy Now</button>
+        <button class="btn-primary" onclick="calitoyCheckout('price_1UBIfYISCKHDtOuFQjtqWzr3','Digital Double Creation')">Buy Now</button>
       </div>
-      <div class="pricing-card">
+      <div class="pricing-card reveal">
         <h3>Voice Cloning Package</h3>
-        <div class="pricing-price">$2,500<span class="period">one-time</span></div>
+        <div class="pricing-price">$2,500<span class="period">/ one-time</span></div>
         <p class="pricing-desc">Complete voice cloning for up to 5 characters.</p>
         <ul class="pricing-features">
-          <li>Up to 5 custom voice models</li>
-          <li>Emotional range modeling</li>
-          <li>Accent and dialect support</li>
-          <li>3 rounds of revisions</li>
-          <li>48-hour delivery</li>
-          <li>Full usage rights</li>
+          <li><i class="fa-solid fa-check"></i> Up to 5 custom voice models</li>
+          <li><i class="fa-solid fa-check"></i> Emotional range modeling</li>
+          <li><i class="fa-solid fa-check"></i> Accent &amp; dialect support</li>
+          <li><i class="fa-solid fa-check"></i> 48-hour delivery + usage rights</li>
         </ul>
         <button class="btn-primary" onclick="calitoyCheckout('price_1UBIfYISCKHDtOuFfvym17rP','Voice Cloning Package')">Buy Now</button>
       </div>
@@ -167,57 +222,41 @@
   </div>
 </section>
 
+<!-- CTA -->
 <section class="cta-section">
   <div class="container">
-    <h2>Not Sure Which Package?</h2>
-    <p>Submit a casting brief and we will recommend the right package for your production.</p>
-    <a href="intake.html" class="btn-primary">Submit Casting Brief</a>
+    <div class="cta-inner reveal">
+      <h2>Not Sure Which Plan?</h2>
+      <p>Submit your talent or brief a production and we will recommend the right plan for you.</p>
+      <div class="hero-cta-group">
+        <a href="submit.html" class="btn-primary">Submit Talent</a>
+        <a href="clients.html" class="btn-gold">Request a Casting Session</a>
+      </div>
+    </div>
   </div>
 </section>
 
+<!-- FOOTER -->
 <footer>
   <div class="container">
     <div class="footer-grid">
       <div class="footer-brand">
         <a href="index.html" class="nav-logo"><img src="assets/calitoy-casting-logo.png" alt="Calitoy Casting" height="40"></a>
-        <p>AI-powered casting studio for film and movies. Photorealistic digital talent, voice cloning, and crowd generation.</p>
+        <p>The Digital Twin Casting House. AI-powered talent, digital doubles, voice cloning, and intelligent casting for modern productions.</p>
+        <p class="footer-tagline">Part of Calitoy Creative Agency</p>
       </div>
-      <div class="footer-col">
-        <h4>Company</h4>
-        <ul>
-          <li><a href="about.html">About</a></li>
-          <li><a href="services.html">Services</a></li>
-          <li><a href="pricing.html">Pricing</a></li>
-          <li><a href="showcase.html">Showcase</a></li>
-        </ul>
-      </div>
-      <div class="footer-col">
-        <h4>Services</h4>
-        <ul>
-          <li><a href="services.html">Digital Doubles</a></li>
-          <li><a href="services.html">Voice Cloning</a></li>
-          <li><a href="services.html">De-Aging</a></li>
-          <li><a href="services.html">Crowd Generation</a></li>
-        </ul>
-      </div>
-      <div class="footer-col">
-        <h4>Get Started</h4>
-        <ul>
-          <li><a href="intake.html">Casting Brief</a></li>
-          <li><a href="pricing.html">Pricing</a></li>
-          <li><a href="intake.html">Contact</a></li>
-        </ul>
-      </div>
+      <div class="footer-col"><h4>Platform</h4><ul><li><a href="submit.html">Submit Talent</a></li><li><a href="clients.html">For Clients</a></li><li><a href="agencies.html">For Agencies</a></li><li><a href="pricing.html">Pricing</a></li></ul></div>
+      <div class="footer-col"><h4>Explore</h4><ul><li><a href="services.html">Services</a></li><li><a href="showcase.html">Showcase</a></li><li><a href="about.html">About</a></li><li><a href="login.html">Login</a></li></ul></div>
+      <div class="footer-col"><h4>Network</h4><ul><li><a href="https://calitoy.com" target="_blank">Calitoy.com</a></li><li><a href="https://calitoycore.com" target="_blank">CalitoyCore.com</a></li><li><a href="https://calitoymuse.com" target="_blank">CalitoyMuse.com</a></li></ul></div>
     </div>
     <div class="footer-bottom">
-      <p>&copy; 2026 Calitoy Casting. All rights reserved.</p>
+      <p>&copy; 2026 Calitoy Casting. Part of Calitoy Creative Agency. All rights reserved.</p>
       <div class="footer-network">
         <a href="https://calitoy.com" target="_blank">calitoy.com</a>
         <a href="https://calitoycore.com" target="_blank">calitoycore.com</a>
         <a href="https://calitoymuse.com" target="_blank">calitoymuse.com</a>
         <a href="https://kurced.com" target="_blank">kurced.com</a>
         <a href="https://xcalitoy.com" target="_blank">xcalitoy.com</a>
-        <a href="https://jeremydeanmusic.com" target="_blank">jeremydeanmusic.com</a>
       </div>
     </div>
   </div>
