@@ -48,13 +48,13 @@
     if (!form) return;
     form.addEventListener('submit', function (e) {
       e.preventDefault();
-      var msgDiv = form.querySelector('.form-message') || document.getElementById('form-message');
+      var msgDiv = form.querySelector('.form-message') || form.parentElement.querySelector('.form-message') || document.getElementById('form-message');
       var submitBtn = form.querySelector('[type="submit"]');
       var originalText = submitBtn ? submitBtn.textContent : 'Submit';
 
       var data = { source: source };
       form.querySelectorAll('input, select, textarea').forEach(function (field) {
-        if (!field.name) return;
+        if (!field.name || field.type === 'password') return;
         if (field.type === 'checkbox') {
           if (field.checked) {
             data[field.name] = data[field.name] ? data[field.name] + ', ' + field.value : field.value;
@@ -72,7 +72,13 @@
         headers: { 'Content-Type': 'application/json' },
         body: JSON.stringify(data)
       })
-        .then(function (res) { return res.json().catch(function () { return {}; }); })
+        .then(function (res) {
+          if (!res.ok) throw new Error('Submission rejected');
+          return res.json();
+        })
+        .then(function (result) {
+          if (!result || result.success !== true) throw new Error('Submission was not acknowledged');
+        })
         .then(function () {
           if (msgDiv) { msgDiv.className = 'form-message success'; msgDiv.textContent = successMsg; msgDiv.style.display = 'block'; }
           form.reset();
@@ -133,7 +139,7 @@
     function validateStep(idx) {
       var required = steps[idx].querySelectorAll('[required]');
       for (var i = 0; i < required.length; i++) {
-        if (!required[i].value) {
+        if (!required[i].checkValidity()) {
           required[i].reportValidity();
           return false;
         }
@@ -157,7 +163,7 @@
       var submitBtn = msForm.querySelector('[type="submit"]');
       var data = { source: 'calitoy-casting-talent-submission' };
       msForm.querySelectorAll('input, select, textarea').forEach(function (field) {
-        if (!field.name) return;
+        if (!field.name || field.type === 'password') return;
         if (field.type === 'checkbox') {
           if (field.checked) { data[field.name] = data[field.name] ? data[field.name] + ', ' + field.value : field.value; }
         } else if (field.value) { data[field.name] = field.value; }
@@ -170,7 +176,13 @@
         headers: { 'Content-Type': 'application/json' },
         body: JSON.stringify(data)
       })
-        .then(function (res) { return res.json().catch(function () { return {}; }); })
+        .then(function (res) {
+          if (!res.ok) throw new Error('Submission rejected');
+          return res.json();
+        })
+        .then(function (result) {
+          if (!result || result.success !== true) throw new Error('Submission was not acknowledged');
+        })
         .then(function () {
           if (msgDiv) { msgDiv.className = 'form-message success'; msgDiv.textContent = 'Your talent profile has been submitted. Complete your package selection to finish, or our team will follow up within 24 hours.'; msgDiv.style.display = 'block'; }
           if (submitBtn) { submitBtn.disabled = false; submitBtn.textContent = 'Submit Talent Profile'; }
