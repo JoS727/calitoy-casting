@@ -5,7 +5,7 @@
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <title>Login — Calitoy Casting</title>
 <link rel="icon" type="image/png" href="assets/calitoy-creative-logo.png">
-<meta name="description" content="Log in to your Calitoy Casting account — talent, agency, or production portal.">
+<meta name="description" content="The portal is not available yet. Leave your email to request early access.">
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Space+Grotesk:wght@400;500;600;700&display=swap" rel="stylesheet">
@@ -45,33 +45,29 @@
 </div>
 
 <section class="hero compact" style="min-height:78vh;">
-  <div class="hero-bg" style="background-image:url('https://images.pexels.com/photos/5389616/pexels-photo-5389616.jpeg?cs=srgb&dl=pexels-isabella-mendes-107313-5389616.jpg&fm=jpg></div>
+  <div class="hero-bg" style="background-image:url('https://images.pexels.com/photos/5389616/pexels-photo-5389616.jpeg?cs=srgb&dl=pexels-isabella-mendes-107313-5389616.jpg&fm=jpg')"></div>
   <div class="hero-overlay"></div>
   <div class="hero-grid"></div>
   <div class="container hero-content" style="max-width:480px;">
     <span class="hero-badge"><span class="dot"></span> Portal Access</span>
-    <h1 style="font-size:clamp(2rem,5vw,2.8rem);">Welcome <span class="gold">Back</span></h1>
-    <p class="lead" style="font-size:1.05rem;">Log in to your talent, agency, or production portal.</p>
+    <h1 style="font-size:clamp(2rem,5vw,2.8rem);">Portal <span class="gold">Early Access</span></h1>
+    <p class="lead" style="font-size:1.05rem;">The portal is not available yet. Leave your email to request early access.</p>
     <div class="form-container" style="text-align:left;padding:34px;margin-top:8px;">
-      <div class="form-message"></div>
-      <form id="login-form">
+      <div class="form-message" role="status" aria-live="polite"></div>
+      <form id="login-form" method="post">
         <div class="form-group">
-          <label>Email Address <span class="req">*</span></label>
-          <input type="email" name="email" placeholder="you@email.com" required>
+          <label for="access-email">Email Address <span class="req">*</span></label>
+          <input id="access-email" type="email" name="email" autocomplete="email" placeholder="you@email.com" required>
         </div>
         <div class="form-group">
-          <label>Password <span class="req">*</span></label>
-          <input type="password" name="password" placeholder="Your password" required>
-        </div>
-        <div class="form-group">
-          <label>Account Type</label>
-          <select name="account_type">
+          <label for="access-account-type">Account Type</label>
+          <select id="access-account-type" name="account_type">
             <option>Talent</option>
             <option>Agency</option>
             <option>Production / Client</option>
           </select>
         </div>
-        <button type="submit" class="btn-primary" style="width:100%;">Log In</button>
+        <button type="submit" class="btn-primary" style="width:100%;">Request Early Access</button>
       </form>
       <p style="color:var(--gray);font-size:0.88rem;margin-top:20px;text-align:center;">
         New here? <a href="submit.html" class="gold" style="font-weight:600;">Submit your talent</a> or
